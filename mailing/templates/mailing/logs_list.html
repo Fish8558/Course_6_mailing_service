@@ -1,0 +1,28 @@
+{% extends 'main/base.html' %}
+{% block content %}
+<a href="{% url 'mailings:mailing_detail' mailing_pk %}" class="btn btn-outline-success btn-block mb-3">
+    Вернуться к рассылке
+</a>
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">#</th>
+        <th scope="col">Название рассылки</th>
+        <th scope="col">Дата и время отправки</th>
+        <th scope="col">Статус</th>
+        <th scope="col">Ответ сервера</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for object in object_list %}
+    <tr>
+        <th scope="row">{{ forloop.counter }}</th>
+        <td>{{ object.mailing }}</td>
+        <td>{{ object.datatime}}</td>
+        <td>{{ object.status}}</td>
+        <td>{{ object.answer_server}}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

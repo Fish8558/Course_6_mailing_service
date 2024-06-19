@@ -1,0 +1,67 @@
+{% extends 'main/base.html' %}
+{% block content %}
+{% load auth_tags %}
+<h2 class="text-center mb-3">{{ title }}</h2>
+<div class="row justify-content-center">
+    <div class="col-12">
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <table class="table">
+                    <tr>
+                        <td>Название</td>
+                        <td>{{ object.name }}</td>
+                    </tr>
+                    <tr>
+                        <td>Создатель</td>
+                        <td>{{ object.owner }}</td>
+                    </tr>
+                    <tr>
+                        <td>Дата создания</td>
+                        <td>{{ object.data_mailing }}</td>
+                    </tr>
+                    <tr>
+                        <td>Следующая отправка</td>
+                        <td>{{ object.sent_time }}</td>
+                    </tr>
+                    <tr>
+                        <td>Дата завершения</td>
+                        <td>{{ object.data_mailing_finish }}</td>
+                    </tr>
+                    <tr>
+                        <td>Периодичность</td>
+                        <td>{{ object.periodicity }}</td>
+                    </tr>
+                    <tr>
+                        <td>Получатели</td>
+                        <td>
+                            {% for client in object.client_mailing.all %}
+                            {{ client.firstname }} {{ client.lastname|slice:1 }}. {{ client.surname|slice:1 }}.
+                            {% if not forloop.last %}|{% endif%}
+                            {% endfor %}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Статус</td>
+                        <td>{{ object.status }}</td>
+                    </tr>
+                    <tr>
+                        <td>Сообщение</td>
+                        <td>{{ object.message }}</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="card-footer">
+                {% if user == object.owner or user.is_superuser or user|is_moderator %}
+                <a href="{% url 'mailings:mailing_update' object.pk %}" class="btn btn-outline-success btn-block">Редактировать</a>
+                {% endif %}
+                {% if user == object.owner or user.is_superuser %}
+                <a href="{% url 'mailings:mailing_delete' object.pk %}"
+                   class="btn btn-outline-danger btn-block">Удалить</a>
+                <a href="{% url 'mailings:log_list' object.pk %}"
+                   class="btn btn-outline-warning btn-block">Посмотреть лог</a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
