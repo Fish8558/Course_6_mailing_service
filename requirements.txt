@@ -1,7 +1,9 @@
+APScheduler==3.10.4
 asgiref==3.8.1
 asttokens==2.4.1
 decorator==5.1.1
 Django==5.0.6
+django-apscheduler==0.6.2
 executing==2.0.1
 ipython==8.25.0
 jedi==0.19.1
@@ -16,9 +18,11 @@ pure-eval==0.2.2
 Pygments==2.18.0
 python-dotenv==1.0.1
 pytils==0.4.1
+pytz==2024.1
 six==1.16.0
 sqlparse==0.5.0
 stack-data==0.6.3
 traitlets==5.14.3
 typing_extensions==4.12.2
+tzlocal==5.2
 wcwidth==0.2.13
