@@ -3,12 +3,15 @@ from django.urls import reverse_lazy, reverse
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from blog.forms import ArticleForm
 from blog.models import Article
+from main.utils import get_article_list_from_cache
 
 
 class ArticleListView(ListView):
     model = Article
-    queryset = Article.objects.all()
     extra_context = {"title": "Cтатьи"}
+
+    def get_queryset(self):
+        return get_article_list_from_cache()
 
 
 class ArticleDetailView(DetailView):
