@@ -1,0 +1,24 @@
+{% extends 'main/base.html' %}
+{% block content %}
+{% load auth_tags %}
+<div class="row">
+    <div class="col-12">
+        <div class="card mb-4 box-shadow">
+            <div class="card-header">
+                <b class="article_title">{{ object.title|capfirst }}</b>
+            </div>
+            <div class="card-body">
+                <img src="{{ object.image.url }}" style="width:100%;height:30em;">
+                <p class="mt-4">{{ object.content|capfirst }}</p>
+                <p>Автор: {{ object.owner.first_name|default:'аноним' }}</p>
+                <p>Добавлена: {{ object.created_at }}</p>
+                <p>Количество просмотров: {{ object.count_views }}</p>
+                {% if user|is_content_manager or user == object.owner %}
+                <a href="{% url 'blog:article_update' object.pk %}" class="btn btn-warning">Редактировать</a>
+                <a href="{% url 'blog:article_delete' object.pk %}" class="btn btn-danger">Удалить</a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
