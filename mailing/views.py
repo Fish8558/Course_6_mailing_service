@@ -1,13 +1,15 @@
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.core.exceptions import PermissionDenied
 from django.urls import reverse_lazy, reverse
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
-from mailing.forms import MailingForm, ManagerMailingForm
+from mailing.forms import MailingForm, ModeratorMailingForm
 from mailing.models import Mailing, Logs
 from client.models import Client
+from main.utils import AccessCheckMixin
 from message.models import Message
 
 
-class MailingListView(ListView):
+class MailingListView(LoginRequiredMixin, ListView):
     """Контроллер просмотра списка рассылок"""
     model = Mailing
     extra_context = {'title': 'Рассылки'}
@@ -20,7 +22,7 @@ class MailingListView(ListView):
         return queryset
 
 
-class MailingDetailView(DetailView):
+class MailingDetailView(LoginRequiredMixin, DetailView):
     """Контроллер просмотра одной рассылки"""
     model = Mailing
     extra_context = {'title': 'Информация о рассылке'}
@@ -33,7 +35,7 @@ class MailingDetailView(DetailView):
         return self.object
 
 
-class MailingCreateView(CreateView):
+class MailingCreateView(LoginRequiredMixin, CreateView):
     """Контроллер создания рассылки"""
     model = Mailing
     form_class = MailingForm
@@ -54,7 +56,7 @@ class MailingCreateView(CreateView):
         return super().form_valid(form)
 
 
-class MailingUpdateView(UpdateView):
+class MailingUpdateView(LoginRequiredMixin, UpdateView):
     """Контроллер редактирования рассылки"""
     model = Mailing
     form_class = MailingForm
@@ -76,7 +78,7 @@ class MailingUpdateView(UpdateView):
         if user == self.object.owner or user.is_superuser:
             return MailingForm
         elif user.groups.filter(name='moderator').exists():
-            return ManagerMailingForm
+            return ModeratorMailingForm
 
     def get_object(self, queryset=None):
         self.object = super().get_object(queryset)
@@ -87,14 +89,14 @@ class MailingUpdateView(UpdateView):
         return self.object
 
 
-class MailingDeleteView(DeleteView):
+class MailingDeleteView(LoginRequiredMixin, AccessCheckMixin, DeleteView):
     """Контроллер удаления рассылки"""
     model = Mailing
     extra_context = {'title': 'Удаление рассылки'}
     success_url = reverse_lazy('mailings:mailing_list')
 
 
-class LogListView(ListView):
+class LogListView(LoginRequiredMixin, ListView):
     """Контроллер просмотра логов рассылки"""
     model = Logs
     extra_context = {'title': 'Лог рассылок'}

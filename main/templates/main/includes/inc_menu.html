@@ -7,9 +7,14 @@
 
         <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
             <li><a href="{% url 'main:home' %}" class="nav-link px-2 link-secondary">Главная</a></li>
+            {% if user.is_authenticated %}
             <li><a href="{% url 'clients:client_list' %}" class="nav-link px-2">Клиенты</a></li>
             <li><a href="{% url 'messages:message_list' %}" class="nav-link px-2">Сообщения</a></li>
             <li><a href="{% url 'mailings:mailing_list' %}" class="nav-link px-2">Рассылки</a></li>
+            {% if perms.users.view_all_users %}
+            <li><a class="nav-link link-success" href="{% url 'users:user_list' %}">Пользователи</a></li>
+            {% endif %}
+            {% endif %}
         </ul>
 
         <div class="col-md-3 text-end">

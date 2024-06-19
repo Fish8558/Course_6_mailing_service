@@ -1,10 +1,12 @@
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.urls import reverse_lazy, reverse
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from client.forms import ClientForm
 from client.models import Client
+from main.utils import AccessCheckMixin
 
 
-class ClientListView(ListView):
+class ClientListView(LoginRequiredMixin, ListView):
     """Контроллер просмотра списка клиентов"""
     model = Client
     extra_context = {'title': 'Клиенты сервиса'}
@@ -17,13 +19,13 @@ class ClientListView(ListView):
         return queryset
 
 
-class ClientDetailView(DetailView):
+class ClientDetailView(LoginRequiredMixin, AccessCheckMixin,  DetailView):
     """Контроллер просмотра одного клиента"""
     model = Client
     extra_context = {'title': 'Информация о клиенте'}
 
 
-class ClientCreateView(CreateView):
+class ClientCreateView(LoginRequiredMixin, CreateView):
     """Контроллер создания клиента"""
     model = Client
     form_class = ClientForm
@@ -42,7 +44,7 @@ class ClientCreateView(CreateView):
         return data
 
 
-class ClientUpdateView(UpdateView):
+class ClientUpdateView(LoginRequiredMixin, AccessCheckMixin, UpdateView):
     """Контроллер редактирования клиента"""
     model = Client
     form_class = ClientForm
@@ -58,7 +60,7 @@ class ClientUpdateView(UpdateView):
         return data
 
 
-class ClientDeleteView(DeleteView):
+class ClientDeleteView(LoginRequiredMixin, AccessCheckMixin, DeleteView):
     """Контроллер удаления клиента"""
     model = Client
     extra_context = {'title': 'Удаление клиента'}

@@ -1,10 +1,13 @@
 import secrets
+
+from django.contrib.auth.decorators import permission_required
+from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
 from django.contrib.auth.views import LoginView, LogoutView, PasswordResetView
 from django.core.mail import send_mail
 from django.http import HttpResponseRedirect
 from django.shortcuts import get_object_or_404, redirect
 from django.urls import reverse_lazy, reverse
-from django.views.generic import CreateView, UpdateView
+from django.views.generic import CreateView, UpdateView, ListView
 from config.settings import EMAIL_HOST_USER
 from main.utils import make_random_password
 from users.forms import LoginForm, RegisterForm, UserForm, RecoveryForm
@@ -57,7 +60,7 @@ def email_verification(request, token):
     return redirect(reverse('users:login'))
 
 
-class UserUpdateView(UpdateView):
+class UserUpdateView(LoginRequiredMixin, UpdateView):
     """Контроллер редактирования пользователя"""
     model = User
     form_class = UserForm
@@ -95,3 +98,28 @@ class UserPasswordResetView(PasswordResetView):
                     print(f"Ошибка при отправке пароля юзеру: ({user=}), на email: {user_email}")
             return HttpResponseRedirect(reverse('users:login'))
         return super().form_valid(form)
+
+
+class UserListView(PermissionRequiredMixin, ListView):
+    """Контроллер просмотра списка пользователей"""
+    permission_required = 'users.view_all_users'
+    model = User
+    extra_context = {'title': 'Список пользователей'}
+
+    def get_queryset(self, *args, **kwargs):
+        user = self.request.user
+        if user.is_superuser:
+            return super().get_queryset(*args, **kwargs).exclude(pk=self.request.user.pk).exclude(is_superuser=True)
+        return super().get_queryset(*args, **kwargs).exclude(pk=self.request.user.pk).exclude(is_superuser=True).exclude(is_staff=True)
+
+
+@permission_required('users.set_user_deactivate')
+def toggle_activiti(request, pk):
+    """Контроллер изменения статуса пользователя"""
+    user = User.objects.get(pk=pk)
+    if user.is_active:
+        user.is_active = False
+    else:
+        user.is_active = True
+    user.save()
+    return redirect(reverse('users:user_list'))

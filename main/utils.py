@@ -1,5 +1,7 @@
 import secrets
 import string
+
+from django.core.exceptions import PermissionDenied
 from django.forms import BooleanField
 
 
@@ -19,3 +21,13 @@ def make_random_password():
     character = string.ascii_letters + string.digits
     password = "".join(secrets.choice(character) for i in range(15))
     return password
+
+
+class AccessCheckMixin:
+    """Класс миксин проверки на суперюзера и создателя объекта"""
+    def get_object(self, queryset=None):
+        self.object = super().get_object(queryset)
+        user = self.request.user
+        if not user.is_superuser and user != self.object.owner:
+            raise PermissionDenied
+        return self.object

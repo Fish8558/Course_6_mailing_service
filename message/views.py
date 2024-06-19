@@ -1,10 +1,12 @@
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.urls import reverse_lazy, reverse
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
+from main.utils import AccessCheckMixin
 from message.forms import MessageForm
 from message.models import Message
 
 
-class MessageListView(ListView):
+class MessageListView(LoginRequiredMixin, ListView):
     """Контроллер просмотра списка сообщений"""
     model = Message
     extra_context = {'title': 'Сообщения'}
@@ -17,13 +19,13 @@ class MessageListView(ListView):
         return queryset
 
 
-class MessageDetailView(DetailView):
+class MessageDetailView(LoginRequiredMixin, AccessCheckMixin, DetailView):
     """Контроллер просмотра одного сообщения"""
     model = Message
     extra_context = {'title': 'Информация о сообщении'}
 
 
-class MessageCreateView(CreateView):
+class MessageCreateView(LoginRequiredMixin, CreateView):
     """Контроллер создания сообщения"""
     model = Message
     form_class = MessageForm
@@ -37,7 +39,7 @@ class MessageCreateView(CreateView):
         return super().form_valid(form)
 
 
-class MessageUpdateView(UpdateView):
+class MessageUpdateView(LoginRequiredMixin, AccessCheckMixin, UpdateView):
     """Контроллер редактирования сообщения"""
     model = Message
     form_class = MessageForm
@@ -47,7 +49,7 @@ class MessageUpdateView(UpdateView):
         return reverse('messages:message_detail', args=[self.kwargs.get('pk')])
 
 
-class MessageDeleteView(DeleteView):
+class MessageDeleteView(LoginRequiredMixin, AccessCheckMixin, DeleteView):
     """Контроллер удаления сообщения"""
     model = Message
     extra_context = {'title': 'Удаление сообщения'}
