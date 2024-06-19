@@ -1,0 +1,28 @@
+{% extends 'main/base.html' %}
+{% block content %}
+<h2 class="text-center mb-3">{{ title }}</h2>
+{% if user.is_authenticated %}
+<a href="{% url 'messages:message_create' %}" class="btn btn-outline-success btn-block mb-3">
+    Добавить сообщение
+</a>
+{% endif %}
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">#</th>
+        <th scope="col">Тема письма</th>
+        <th scope="col">Тело письма</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for object in object_list %}
+    <tr>
+        <th scope="row"><a href="{% url 'messages:message_detail' object.pk %}" class="btn btn-sm btn-outline-success">
+            {{ forloop.counter }}</a></th>
+        <td>{{ object.letter_subject }}</td>
+        <td>{{ object.letter_body | slice:100 }}...</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

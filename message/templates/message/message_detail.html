@@ -1,0 +1,29 @@
+{% extends 'main/base.html' %}
+{% block content %}
+<h2 class="text-center mb-3">{{ title }}</h2>
+<div class="row justify-content-center">
+    <div class="col-12">
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <table class="table">
+                    <tr>
+                        <td>Тема</td>
+                        <td>{{ object.letter_subject }}</td>
+                    </tr>
+                    <tr>
+                        <td>Текст</td>
+                        <td>{{ object.letter_body }}</td>
+                    </tr>
+                </table>
+            </div>
+            {% if user == object.owner or user.is_superuser %}
+            <div class="card-footer">
+                <a href="{% url 'messages:message_update' object.pk %}" class="btn btn-outline-success btn-block">Редактировать</a>
+                <a href="{% url 'messages:message_delete' object.pk %}"
+                   class="btn btn-outline-danger btn-block">Удалить</a>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}
