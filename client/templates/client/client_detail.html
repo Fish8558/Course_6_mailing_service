@@ -1,0 +1,49 @@
+{% extends 'main/base.html' %}
+{% block content %}
+<h2 class="text-center mb-3">{{ title }}</h2>
+<div class="row justify-content-center">
+    <div class="col-6">
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <table class="table">
+                    <tr>
+                        <td>Имя</td>
+                        <td>{{ object.firstname }}</td>
+                    </tr>
+                    <tr>
+                        <td>Фамилия</td>
+                        <td>{{ object.lastname }}</td>
+                    </tr>
+                    <tr>
+                        <td>Отчество</td>
+                        <td>{{ object.surname }}</td>
+                    </tr>
+                    <tr>
+                        <td>Почта</td>
+                        <td>{{ object.email }}</td>
+                    </tr>
+                    {% if user.is_superuser %}
+                    <tr>
+                        <td>Добавил</td>
+                        <td>{{ object.owner.first_name }}</td>
+                    </tr>
+                    {% endif %}
+                    {% if object.comment %}
+                    <tr>
+                        <td>Комментарий</td>
+                        <td>{{ object.comment}}</td>
+                    </tr>
+                    {% endif %}
+                </table>
+            </div>
+            {% if user == object.owner or user.is_superuser %}
+            <div class="card-footer">
+                <a href="{% url 'clients:client_update' object.pk %}" class="btn btn-outline-success btn-block">Редактировать</a>
+                <a href="{% url 'clients:client_delete' object.pk %}"
+                   class="btn btn-outline-danger btn-block">Удалить</a>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}

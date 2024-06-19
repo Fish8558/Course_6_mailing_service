@@ -1,0 +1,38 @@
+{% extends 'main/base.html' %}
+{% block content %}
+<h2 class="text-center mb-3">{{ title }}</h2>
+{% if user.is_authenticated %}
+<a href="{% url 'clients:client_create' %}" class="btn btn-outline-success btn-block mb-3">
+    Добавить клиента
+</a>
+{% endif %}
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">#</th>
+        <th scope="col">Имя</th>
+        <th scope="col">Фамилия</th>
+        <th scope="col">Отчество</th>
+        <th scope="col">Email</th>
+        {% if user.is_superuser %}
+        <th scope="col">Добавил</th>
+        {% endif %}
+    </tr>
+    </thead>
+    <tbody>
+    {% for object in object_list %}
+    <tr>
+        <th scope="row"><a href="{% url 'clients:client_detail' object.pk %}" class="btn btn-sm btn-outline-success">
+            {{ forloop.counter }}</a></th>
+        <td>{{ object.firstname }}</td>
+        <td>{{ object.lastname }}</td>
+        <td>{{ object.surname }}</td>
+        <td>{{ object.email }}</td>
+        {% if user.is_superuser %}
+        <td>{{ object.owner.first_name }}</td>
+        {% endif %}
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

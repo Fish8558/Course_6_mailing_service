@@ -1,0 +1,21 @@
+{% extends 'main/base.html' %}
+{% block content %}
+<h2 class="text-center mb-3">{{ title }}</h2>
+<div class="row justify-content-center">
+    <section class="col-5 card ">
+        <div class="card-body">
+            <form method="POST">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" class="btn btn-lg btn-block btn-outline-success form-control">
+                    {% if object %}
+                    Сохранить
+                    {% else %}
+                    Добавить
+                    {% endif %}
+                </button>
+            </form>
+        </div>
+    </section>
+</div>
+{% endblock %}
