@@ -1,0 +1,552 @@
+[
+  {
+    "model": "mailing.logs",
+    "pk": 1,
+    "fields": {
+      "mailing": 1,
+      "datatime": "2024-06-19T21:59:20.035Z",
+      "status": "Безуспешно",
+      "answer_server": "(554, b'5.7.1 Message rejected under suspicion of SPAM; https://ya.cc/1IrBc 1718834360-KxR1dTNGemI0-x3cLnPkj')"
+    }
+  },
+  {
+    "model": "mailing.logs",
+    "pk": 2,
+    "fields": {
+      "mailing": 1,
+      "datatime": "2024-06-19T21:59:20.541Z",
+      "status": "Успешно",
+      "answer_server": "Отправлено"
+    }
+  },
+  {
+    "model": "mailing.logs",
+    "pk": 3,
+    "fields": {
+      "mailing": 1,
+      "datatime": "2024-06-19T21:59:21.268Z",
+      "status": "Успешно",
+      "answer_server": "Отправлено"
+    }
+  },
+  {
+    "model": "mailing.logs",
+    "pk": 4,
+    "fields": {
+      "mailing": 1,
+      "datatime": "2024-06-19T21:59:21.801Z",
+      "status": "Успешно",
+      "answer_server": "Отправлено"
+    }
+  },
+  {
+    "model": "mailing.logs",
+    "pk": 5,
+    "fields": {
+      "mailing": 1,
+      "datatime": "2024-06-19T21:59:22.507Z",
+      "status": "Успешно",
+      "answer_server": "Отправлено"
+    }
+  },
+  {
+    "model": "mailing.logs",
+    "pk": 6,
+    "fields": {
+      "mailing": 1,
+      "datatime": "2024-06-19T21:59:23.033Z",
+      "status": "Успешно",
+      "answer_server": "Отправлено"
+    }
+  },
+  {
+    "model": "mailing.logs",
+    "pk": 7,
+    "fields": {
+      "mailing": 1,
+      "datatime": "2024-06-19T21:59:23.620Z",
+      "status": "Безуспешно",
+      "answer_server": "(554, b'5.7.1 Message rejected under suspicion of SPAM; https://ya.cc/1IrBc 1718834364-NxRb1EMar0U0-jG0PMAVM')"
+    }
+  },
+  {
+    "model": "mailing.logs",
+    "pk": 8,
+    "fields": {
+      "mailing": 1,
+      "datatime": "2024-06-19T21:59:24.151Z",
+      "status": "Успешно",
+      "answer_server": "Отправлено"
+    }
+  },
+  {
+    "model": "mailing.logs",
+    "pk": 9,
+    "fields": {
+      "mailing": 1,
+      "datatime": "2024-06-19T21:59:24.753Z",
+      "status": "Успешно",
+      "answer_server": "Отправлено"
+    }
+  },
+  {
+    "model": "mailing.logs",
+    "pk": 10,
+    "fields": {
+      "mailing": 1,
+      "datatime": "2024-06-19T21:59:25.519Z",
+      "status": "Успешно",
+      "answer_server": "Отправлено"
+    }
+  },
+  {
+    "model": "mailing.logs",
+    "pk": 11,
+    "fields": {
+      "mailing": 2,
+      "datatime": "2024-06-19T21:59:26.097Z",
+      "status": "Безуспешно",
+      "answer_server": "(554, b'5.7.1 Message rejected under suspicion of SPAM; https://ya.cc/1IrBc 1718834366-QxRbFO9NgCg0-tCjYgp0r')"
+    }
+  },
+  {
+    "model": "mailing.logs",
+    "pk": 12,
+    "fields": {
+      "mailing": 2,
+      "datatime": "2024-06-19T21:59:26.533Z",
+      "status": "Успешно",
+      "answer_server": "Отправлено"
+    }
+  },
+  {
+    "model": "mailing.logs",
+    "pk": 13,
+    "fields": {
+      "mailing": 2,
+      "datatime": "2024-06-19T21:59:27.207Z",
+      "status": "Успешно",
+      "answer_server": "Отправлено"
+    }
+  },
+  {
+    "model": "mailing.logs",
+    "pk": 14,
+    "fields": {
+      "mailing": 2,
+      "datatime": "2024-06-19T21:59:27.839Z",
+      "status": "Безуспешно",
+      "answer_server": "(554, b'5.7.1 Message rejected under suspicion of SPAM; https://ya.cc/1IrBc 1718834368-RxRlch2OoGk0-KrSOpsbo')"
+    }
+  },
+  {
+    "model": "mailing.logs",
+    "pk": 15,
+    "fields": {
+      "mailing": 2,
+      "datatime": "2024-06-19T21:59:28.295Z",
+      "status": "Успешно",
+      "answer_server": "Отправлено"
+    }
+  },
+  {
+    "model": "mailing.logs",
+    "pk": 16,
+    "fields": {
+      "mailing": 2,
+      "datatime": "2024-06-19T21:59:28.833Z",
+      "status": "Успешно",
+      "answer_server": "Отправлено"
+    }
+  },
+  {
+    "model": "mailing.logs",
+    "pk": 17,
+    "fields": {
+      "mailing": 2,
+      "datatime": "2024-06-19T21:59:29.347Z",
+      "status": "Успешно",
+      "answer_server": "Отправлено"
+    }
+  },
+  {
+    "model": "mailing.logs",
+    "pk": 18,
+    "fields": {
+      "mailing": 2,
+      "datatime": "2024-06-19T21:59:30.161Z",
+      "status": "Безуспешно",
+      "answer_server": "(554, b'5.7.1 Message rejected under suspicion of SPAM; https://ya.cc/1IrBc 1718834370-UxRO4q0asa60-l6MkngIu')"
+    }
+  },
+  {
+    "model": "mailing.logs",
+    "pk": 19,
+    "fields": {
+      "mailing": 2,
+      "datatime": "2024-06-19T21:59:30.631Z",
+      "status": "Успешно",
+      "answer_server": "Отправлено"
+    }
+  },
+  {
+    "model": "mailing.logs",
+    "pk": 20,
+    "fields": {
+      "mailing": 2,
+      "datatime": "2024-06-19T21:59:31.307Z",
+      "status": "Безуспешно",
+      "answer_server": "(554, b'5.7.1 Message rejected under suspicion of SPAM; https://ya.cc/1IrBc 1718834371-VxR3aCRk9uQ0-HPR3cfn4')"
+    }
+  },
+  {
+    "model": "mailing.logs",
+    "pk": 21,
+    "fields": {
+      "mailing": 3,
+      "datatime": "2024-06-19T21:59:31.836Z",
+      "status": "Успешно",
+      "answer_server": "Отправлено"
+    }
+  },
+  {
+    "model": "mailing.logs",
+    "pk": 22,
+    "fields": {
+      "mailing": 3,
+      "datatime": "2024-06-19T21:59:32.345Z",
+      "status": "Успешно",
+      "answer_server": "Отправлено"
+    }
+  },
+  {
+    "model": "mailing.logs",
+    "pk": 23,
+    "fields": {
+      "mailing": 3,
+      "datatime": "2024-06-19T21:59:33.015Z",
+      "status": "Успешно",
+      "answer_server": "Отправлено"
+    }
+  },
+  {
+    "model": "mailing.logs",
+    "pk": 24,
+    "fields": {
+      "mailing": 3,
+      "datatime": "2024-06-19T21:59:33.492Z",
+      "status": "Успешно",
+      "answer_server": "Отправлено"
+    }
+  },
+  {
+    "model": "mailing.logs",
+    "pk": 25,
+    "fields": {
+      "mailing": 3,
+      "datatime": "2024-06-19T21:59:34.046Z",
+      "status": "Успешно",
+      "answer_server": "Отправлено"
+    }
+  },
+  {
+    "model": "mailing.logs",
+    "pk": 26,
+    "fields": {
+      "mailing": 3,
+      "datatime": "2024-06-19T21:59:34.447Z",
+      "status": "Успешно",
+      "answer_server": "Отправлено"
+    }
+  },
+  {
+    "model": "mailing.logs",
+    "pk": 27,
+    "fields": {
+      "mailing": 3,
+      "datatime": "2024-06-19T21:59:35.016Z",
+      "status": "Успешно",
+      "answer_server": "Отправлено"
+    }
+  },
+  {
+    "model": "mailing.logs",
+    "pk": 28,
+    "fields": {
+      "mailing": 4,
+      "datatime": "2024-06-19T21:59:35.651Z",
+      "status": "Успешно",
+      "answer_server": "Отправлено"
+    }
+  },
+  {
+    "model": "mailing.logs",
+    "pk": 29,
+    "fields": {
+      "mailing": 4,
+      "datatime": "2024-06-19T21:59:36.149Z",
+      "status": "Успешно",
+      "answer_server": "Отправлено"
+    }
+  },
+  {
+    "model": "mailing.logs",
+    "pk": 30,
+    "fields": {
+      "mailing": 4,
+      "datatime": "2024-06-19T21:59:36.736Z",
+      "status": "Успешно",
+      "answer_server": "Отправлено"
+    }
+  },
+  {
+    "model": "mailing.logs",
+    "pk": 31,
+    "fields": {
+      "mailing": 4,
+      "datatime": "2024-06-19T21:59:37.241Z",
+      "status": "Безуспешно",
+      "answer_server": "(554, b'5.7.1 Message rejected under suspicion of SPAM; https://ya.cc/1IrBc 1718834377-bxRopb5Wl8c0-icjnin9P')"
+    }
+  },
+  {
+    "model": "mailing.logs",
+    "pk": 32,
+    "fields": {
+      "mailing": 4,
+      "datatime": "2024-06-19T21:59:37.738Z",
+      "status": "Успешно",
+      "answer_server": "Отправлено"
+    }
+  },
+  {
+    "model": "mailing.logs",
+    "pk": 33,
+    "fields": {
+      "mailing": 4,
+      "datatime": "2024-06-19T21:59:38.275Z",
+      "status": "Успешно",
+      "answer_server": "Отправлено"
+    }
+  },
+  {
+    "model": "mailing.logs",
+    "pk": 34,
+    "fields": {
+      "mailing": 4,
+      "datatime": "2024-06-19T21:59:38.861Z",
+      "status": "Успешно",
+      "answer_server": "Отправлено"
+    }
+  },
+  {
+    "model": "mailing.logs",
+    "pk": 35,
+    "fields": {
+      "mailing": 5,
+      "datatime": "2024-06-19T21:59:39.456Z",
+      "status": "Успешно",
+      "answer_server": "Отправлено"
+    }
+  },
+  {
+    "model": "mailing.logs",
+    "pk": 36,
+    "fields": {
+      "mailing": 5,
+      "datatime": "2024-06-19T21:59:39.916Z",
+      "status": "Успешно",
+      "answer_server": "Отправлено"
+    }
+  },
+  {
+    "model": "mailing.logs",
+    "pk": 37,
+    "fields": {
+      "mailing": 5,
+      "datatime": "2024-06-19T21:59:40.887Z",
+      "status": "Успешно",
+      "answer_server": "Отправлено"
+    }
+  },
+  {
+    "model": "mailing.logs",
+    "pk": 38,
+    "fields": {
+      "mailing": 5,
+      "datatime": "2024-06-19T21:59:41.389Z",
+      "status": "Успешно",
+      "answer_server": "Отправлено"
+    }
+  },
+  {
+    "model": "mailing.logs",
+    "pk": 39,
+    "fields": {
+      "mailing": 5,
+      "datatime": "2024-06-19T21:59:41.999Z",
+      "status": "Успешно",
+      "answer_server": "Отправлено"
+    }
+  },
+  {
+    "model": "mailing.logs",
+    "pk": 40,
+    "fields": {
+      "mailing": 5,
+      "datatime": "2024-06-19T21:59:42.428Z",
+      "status": "Успешно",
+      "answer_server": "Отправлено"
+    }
+  },
+  {
+    "model": "mailing.logs",
+    "pk": 41,
+    "fields": {
+      "mailing": 5,
+      "datatime": "2024-06-19T21:59:43.095Z",
+      "status": "Успешно",
+      "answer_server": "Отправлено"
+    }
+  },
+  {
+    "model": "mailing.logs",
+    "pk": 42,
+    "fields": {
+      "mailing": 5,
+      "datatime": "2024-06-19T21:59:43.721Z",
+      "status": "Успешно",
+      "answer_server": "Отправлено"
+    }
+  },
+  {
+    "model": "mailing.logs",
+    "pk": 43,
+    "fields": {
+      "mailing": 6,
+      "datatime": "2024-06-19T21:59:44.249Z",
+      "status": "Успешно",
+      "answer_server": "Отправлено"
+    }
+  },
+  {
+    "model": "mailing.logs",
+    "pk": 44,
+    "fields": {
+      "mailing": 6,
+      "datatime": "2024-06-19T21:59:44.809Z",
+      "status": "Успешно",
+      "answer_server": "Отправлено"
+    }
+  },
+  {
+    "model": "mailing.logs",
+    "pk": 45,
+    "fields": {
+      "mailing": 6,
+      "datatime": "2024-06-19T21:59:45.325Z",
+      "status": "Успешно",
+      "answer_server": "Отправлено"
+    }
+  },
+  {
+    "model": "mailing.logs",
+    "pk": 46,
+    "fields": {
+      "mailing": 6,
+      "datatime": "2024-06-19T21:59:45.746Z",
+      "status": "Успешно",
+      "answer_server": "Отправлено"
+    }
+  },
+  {
+    "model": "mailing.logs",
+    "pk": 47,
+    "fields": {
+      "mailing": 6,
+      "datatime": "2024-06-19T21:59:46.383Z",
+      "status": "Успешно",
+      "answer_server": "Отправлено"
+    }
+  },
+  {
+    "model": "mailing.logs",
+    "pk": 48,
+    "fields": {
+      "mailing": 6,
+      "datatime": "2024-06-19T21:59:47.004Z",
+      "status": "Успешно",
+      "answer_server": "Отправлено"
+    }
+  },
+  {
+    "model": "mailing.logs",
+    "pk": 49,
+    "fields": {
+      "mailing": 6,
+      "datatime": "2024-06-19T21:59:47.591Z",
+      "status": "Успешно",
+      "answer_server": "Отправлено"
+    }
+  },
+  {
+    "model": "mailing.logs",
+    "pk": 50,
+    "fields": {
+      "mailing": 6,
+      "datatime": "2024-06-19T21:59:48.157Z",
+      "status": "Успешно",
+      "answer_server": "Отправлено"
+    }
+  },
+  {
+    "model": "mailing.logs",
+    "pk": 51,
+    "fields": {
+      "mailing": 7,
+      "datatime": "2024-06-19T21:59:48.563Z",
+      "status": "Успешно",
+      "answer_server": "Отправлено"
+    }
+  },
+  {
+    "model": "mailing.logs",
+    "pk": 52,
+    "fields": {
+      "mailing": 7,
+      "datatime": "2024-06-19T21:59:48.962Z",
+      "status": "Успешно",
+      "answer_server": "Отправлено"
+    }
+  },
+  {
+    "model": "mailing.logs",
+    "pk": 53,
+    "fields": {
+      "mailing": 7,
+      "datatime": "2024-06-19T21:59:49.487Z",
+      "status": "Успешно",
+      "answer_server": "Отправлено"
+    }
+  },
+  {
+    "model": "mailing.logs",
+    "pk": 54,
+    "fields": {
+      "mailing": 7,
+      "datatime": "2024-06-19T21:59:50.008Z",
+      "status": "Успешно",
+      "answer_server": "Отправлено"
+    }
+  },
+  {
+    "model": "mailing.logs",
+    "pk": 55,
+    "fields": {
+      "mailing": 7,
+      "datatime": "2024-06-19T21:59:50.736Z",
+      "status": "Успешно",
+      "answer_server": "Отправлено"
+    }
+  }
+]

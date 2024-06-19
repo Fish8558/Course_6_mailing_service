@@ -1,0 +1,169 @@
+[
+  {
+    "model": "mailing.mailing",
+    "pk": 1,
+    "fields": {
+      "name": "Приобрети новенький автомобиль!",
+      "data_mailing": "2024-06-19T21:26:56.942Z",
+      "sent_time": "2024-06-26T21:25:55Z",
+      "data_mailing_finish": "2024-12-16T21:09:32Z",
+      "periodicity": "Еженедельно",
+      "owner": 1,
+      "status": "Запущена",
+      "message": 2,
+      "client_mailing": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    }
+  },
+  {
+    "model": "mailing.mailing",
+    "pk": 2,
+    "fields": {
+      "name": "Приобретите качественные запчасти у нас!",
+      "data_mailing": "2024-06-19T21:28:03.919Z",
+      "sent_time": "2024-06-20T21:27:01Z",
+      "data_mailing_finish": "2024-08-16T21:09:32Z",
+      "periodicity": "Ежедневно",
+      "owner": 1,
+      "status": "Запущена",
+      "message": 1,
+      "client_mailing": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    }
+  },
+  {
+    "model": "mailing.mailing",
+    "pk": 3,
+    "fields": {
+      "name": "Пора открывать сезон рыбалки!",
+      "data_mailing": "2024-06-19T21:37:50.539Z",
+      "sent_time": "2024-06-20T21:36:50Z",
+      "data_mailing_finish": "2024-10-16T21:09:32Z",
+      "periodicity": "Ежедневно",
+      "owner": 2,
+      "status": "Запущена",
+      "message": 3,
+      "client_mailing": [
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ]
+    }
+  },
+  {
+    "model": "mailing.mailing",
+    "pk": 4,
+    "fields": {
+      "name": "Приобретите товары для дома и офиса.",
+      "data_mailing": "2024-06-19T21:38:39.747Z",
+      "sent_time": "2024-06-26T21:37:56Z",
+      "data_mailing_finish": "2024-12-16T21:09:32Z",
+      "periodicity": "Еженедельно",
+      "owner": 2,
+      "status": "Запущена",
+      "message": 4,
+      "client_mailing": [
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ]
+    }
+  },
+  {
+    "model": "mailing.mailing",
+    "pk": 5,
+    "fields": {
+      "name": "Приходите на открытие нашего магазина электроники!",
+      "data_mailing": "2024-06-19T21:49:57.252Z",
+      "sent_time": "2024-06-19T21:48:44Z",
+      "data_mailing_finish": "2024-06-20T21:09:32Z",
+      "periodicity": "Один раз",
+      "owner": 3,
+      "status": "Завершена",
+      "message": 5,
+      "client_mailing": [
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25
+      ]
+    }
+  },
+  {
+    "model": "mailing.mailing",
+    "pk": 6,
+    "fields": {
+      "name": "Обновленный ассортимент гаджетов",
+      "data_mailing": "2024-06-19T21:50:29.350Z",
+      "sent_time": "2024-06-26T21:49:59Z",
+      "data_mailing_finish": "2024-12-16T21:09:32Z",
+      "periodicity": "Еженедельно",
+      "owner": 3,
+      "status": "Запущена",
+      "message": 6,
+      "client_mailing": [
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25
+      ]
+    }
+  },
+  {
+    "model": "mailing.mailing",
+    "pk": 7,
+    "fields": {
+      "name": "Ремонт электроники приходи и чини",
+      "data_mailing": "2024-06-19T21:55:49.861Z",
+      "sent_time": "2024-06-26T21:54:43Z",
+      "data_mailing_finish": "2024-11-16T21:09:32Z",
+      "periodicity": "Еженедельно",
+      "owner": 4,
+      "status": "Запущена",
+      "message": 7,
+      "client_mailing": [
+        26,
+        27,
+        28,
+        29,
+        30
+      ]
+    }
+  }
+]

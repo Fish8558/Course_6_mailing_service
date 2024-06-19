@@ -1,0 +1,362 @@
+[
+  {
+    "model": "client.client",
+    "pk": 1,
+    "fields": {
+      "firstname": "Клим",
+      "lastname": "Ситников",
+      "surname": "Никитевич",
+      "email": "xosunuv_ebi75@list.ru",
+      "comment": "",
+      "owner": 1
+    }
+  },
+  {
+    "model": "client.client",
+    "pk": 2,
+    "fields": {
+      "firstname": "Юстин",
+      "lastname": "Куликов",
+      "surname": "Лукьянович",
+      "email": "vol-awufuli51@yandex.ru",
+      "comment": "",
+      "owner": 1
+    }
+  },
+  {
+    "model": "client.client",
+    "pk": 3,
+    "fields": {
+      "firstname": "Матвей",
+      "lastname": "Герасимов",
+      "surname": "Серапионович",
+      "email": "jajokir_olu77@hotmail.com",
+      "comment": "",
+      "owner": 1
+    }
+  },
+  {
+    "model": "client.client",
+    "pk": 4,
+    "fields": {
+      "firstname": "Алексей",
+      "lastname": "Фокин",
+      "surname": "Аристархович",
+      "email": "kuhu_hofuso49@aol.com",
+      "comment": "",
+      "owner": 1
+    }
+  },
+  {
+    "model": "client.client",
+    "pk": 5,
+    "fields": {
+      "firstname": "Клемент",
+      "lastname": "Миронов",
+      "surname": "Серапионович",
+      "email": "makim_ogefi10@bk.ru",
+      "comment": "",
+      "owner": 1
+    }
+  },
+  {
+    "model": "client.client",
+    "pk": 6,
+    "fields": {
+      "firstname": "Арнольд",
+      "lastname": "Бирюков",
+      "surname": "Богуславович",
+      "email": "nugi-bujeru26@internet.ru",
+      "comment": "",
+      "owner": 1
+    }
+  },
+  {
+    "model": "client.client",
+    "pk": 7,
+    "fields": {
+      "firstname": "Модест",
+      "lastname": "Наумов",
+      "surname": "Германнович",
+      "email": "melare_wuzu97@aol.com",
+      "comment": "",
+      "owner": 1
+    }
+  },
+  {
+    "model": "client.client",
+    "pk": 8,
+    "fields": {
+      "firstname": "Адриан",
+      "lastname": "Кузьмин",
+      "surname": "Георгиевич",
+      "email": "fojozar_itu90@mail.ru",
+      "comment": "",
+      "owner": 1
+    }
+  },
+  {
+    "model": "client.client",
+    "pk": 9,
+    "fields": {
+      "firstname": "Георгий",
+      "lastname": "Дьячков",
+      "surname": "Валерьянович",
+      "email": "zowodid-esi39@gmail.com",
+      "comment": "",
+      "owner": 1
+    }
+  },
+  {
+    "model": "client.client",
+    "pk": 10,
+    "fields": {
+      "firstname": "Иван",
+      "lastname": "Осипов",
+      "surname": "Арсеньевич",
+      "email": "wupeg_ifeki71@internet.ru",
+      "comment": "",
+      "owner": 1
+    }
+  },
+  {
+    "model": "client.client",
+    "pk": 11,
+    "fields": {
+      "firstname": "Станислав",
+      "lastname": "Гущин",
+      "surname": "Святославович",
+      "email": "sebo_zuvaya34@yandex.ru",
+      "comment": "",
+      "owner": 2
+    }
+  },
+  {
+    "model": "client.client",
+    "pk": 12,
+    "fields": {
+      "firstname": "Анатолий",
+      "lastname": "Тарасов",
+      "surname": "Тимофеевич",
+      "email": "lepe-sebeke17@hotmail.com",
+      "comment": "",
+      "owner": 2
+    }
+  },
+  {
+    "model": "client.client",
+    "pk": 13,
+    "fields": {
+      "firstname": "Терентий",
+      "lastname": "Шашков",
+      "surname": "Егорович",
+      "email": "sukoy_alofi93@yandex.ru",
+      "comment": "",
+      "owner": 2
+    }
+  },
+  {
+    "model": "client.client",
+    "pk": 14,
+    "fields": {
+      "firstname": "Дмитрий",
+      "lastname": "Ефремов",
+      "surname": "Витальевич",
+      "email": "boxoz-iruto57@inbox.ru",
+      "comment": "",
+      "owner": 2
+    }
+  },
+  {
+    "model": "client.client",
+    "pk": 15,
+    "fields": {
+      "firstname": "Петр",
+      "lastname": "Лукин",
+      "surname": "Матвеевич",
+      "email": "ceyas_alapa15@yandex.ru",
+      "comment": "",
+      "owner": 2
+    }
+  },
+  {
+    "model": "client.client",
+    "pk": 16,
+    "fields": {
+      "firstname": "Тарас",
+      "lastname": "Филатов",
+      "surname": "Давидович",
+      "email": "rop_ecahula68@bk.ru",
+      "comment": "",
+      "owner": 2
+    }
+  },
+  {
+    "model": "client.client",
+    "pk": 17,
+    "fields": {
+      "firstname": "Юстиниан",
+      "lastname": "Лаврентьев",
+      "surname": "Наумович",
+      "email": "hiloda_yeyo5@aol.com",
+      "comment": "",
+      "owner": 2
+    }
+  },
+  {
+    "model": "client.client",
+    "pk": 18,
+    "fields": {
+      "firstname": "Станислав",
+      "lastname": "Гущин",
+      "surname": "Святославович",
+      "email": "sebo_zuvaya34@yandex.ru",
+      "comment": "",
+      "owner": 3
+    }
+  },
+  {
+    "model": "client.client",
+    "pk": 19,
+    "fields": {
+      "firstname": "Терентий",
+      "lastname": "Шашков",
+      "surname": "Егорович",
+      "email": "sukoy_alofi93@yandex.ru",
+      "comment": "",
+      "owner": 3
+    }
+  },
+  {
+    "model": "client.client",
+    "pk": 20,
+    "fields": {
+      "firstname": "Петр",
+      "lastname": "Лукин",
+      "surname": "Матвеевич",
+      "email": "ceyas_alapa15@yandex.ru",
+      "comment": "",
+      "owner": 3
+    }
+  },
+  {
+    "model": "client.client",
+    "pk": 21,
+    "fields": {
+      "firstname": "Юстиниан",
+      "lastname": "Лаврентьев",
+      "surname": "Наумович",
+      "email": "hiloda_yeyo5@aol.com",
+      "comment": "",
+      "owner": 3
+    }
+  },
+  {
+    "model": "client.client",
+    "pk": 22,
+    "fields": {
+      "firstname": "Илларион",
+      "lastname": "Дмитриев",
+      "surname": "Агафонович",
+      "email": "poceyu-ximi6@yandex.ru",
+      "comment": "",
+      "owner": 3
+    }
+  },
+  {
+    "model": "client.client",
+    "pk": 23,
+    "fields": {
+      "firstname": "Юстин",
+      "lastname": "Шилов",
+      "surname": "Проклович",
+      "email": "lemepi-lofe64@yandex.ru",
+      "comment": "",
+      "owner": 3
+    }
+  },
+  {
+    "model": "client.client",
+    "pk": 24,
+    "fields": {
+      "firstname": "Владислав",
+      "lastname": "Красильников",
+      "surname": "Протасьевич",
+      "email": "pijuwom_opo31@yandex.ru",
+      "comment": "",
+      "owner": 3
+    }
+  },
+  {
+    "model": "client.client",
+    "pk": 25,
+    "fields": {
+      "firstname": "Абрам",
+      "lastname": "Брагин",
+      "surname": "Лукьянович",
+      "email": "bewo-zupoke9@yandex.ru",
+      "comment": "",
+      "owner": 3
+    }
+  },
+  {
+    "model": "client.client",
+    "pk": 26,
+    "fields": {
+      "firstname": "Владислав",
+      "lastname": "Красильников",
+      "surname": "Протасьевич",
+      "email": "pijuwom_opo31@yandex.ru",
+      "comment": "",
+      "owner": 4
+    }
+  },
+  {
+    "model": "client.client",
+    "pk": 27,
+    "fields": {
+      "firstname": "Юстин",
+      "lastname": "Шилов",
+      "surname": "Проклович",
+      "email": "lemepi-lofe64@yandex.ru",
+      "comment": "",
+      "owner": 4
+    }
+  },
+  {
+    "model": "client.client",
+    "pk": 28,
+    "fields": {
+      "firstname": "Илларион",
+      "lastname": "Дмитриев",
+      "surname": "Агафонович",
+      "email": "poceyu-ximi6@yandex.ru",
+      "comment": "",
+      "owner": 4
+    }
+  },
+  {
+    "model": "client.client",
+    "pk": 29,
+    "fields": {
+      "firstname": "Макар",
+      "lastname": "Ермаков",
+      "surname": "Георгьевич",
+      "email": "gageday_oji53@mail.ru",
+      "comment": "",
+      "owner": 4
+    }
+  },
+  {
+    "model": "client.client",
+    "pk": 30,
+    "fields": {
+      "firstname": "Владислав",
+      "lastname": "Ермаков",
+      "surname": "Игоревич",
+      "email": "powoni-zise61@mail.ru",
+      "comment": "",
+      "owner": 4
+    }
+  }
+]
